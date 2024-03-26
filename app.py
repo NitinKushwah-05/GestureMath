@@ -76,7 +76,7 @@ def gen_frames():
         if results.multi_hand_landmarks:
             for landmarks in results.multi_hand_landmarks:
                 handedness = results.multi_handedness[results.multi_hand_landmarks.index(landmarks)].classification[0].label
-                # mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
+                mp_drawing.draw_landmarks(frame, landmarks, mp_hands.HAND_CONNECTIONS)
 
                 index_tip = landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
                 thumb_tip = landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP]
